@@ -24,6 +24,27 @@
                 { "slovakia", 0.20 },
                 { "croatia", 0.25 }
             };
+
+            Console.WriteLine("Enter the amount you want to add Tax: ");
+            double amount = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Enter the country you want to calculate VAT for: ");
+            string country = Console.ReadLine().ToLower();
+
+            if (!rates.ContainsKey(country))
+            {
+                Console.WriteLine("There is no such country in the list");
+                return;
+            }
+
+            double finalPrice = rates[country];
+
+            double vatAmount = amount * finalPrice;
+            double totalAmount = amount + vatAmount;
+
+            Console.WriteLine($"Amount: {amount}");
+            Console.WriteLine($"VAT ({country}): {vatAmount}");
+            Console.WriteLine($"Total Amount: {totalAmount}");
         }
     }
 }
