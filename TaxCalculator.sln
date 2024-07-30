@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VAT calc", "VAT calc\VAT calc.csproj", "{2CBD9472-0ED1-4250-A21C-062A58519243}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaxCalculator", "VAT calc\TaxCalculator.csproj", "{2CBD9472-0ED1-4250-A21C-062A58519243}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxCalculator.Tests", "TaxCalc.Tests\TaxCalculator.Tests.csproj", "{7E5BD589-A2B6-4E38-A34C-15C8F546F9C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{2CBD9472-0ED1-4250-A21C-062A58519243}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CBD9472-0ED1-4250-A21C-062A58519243}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CBD9472-0ED1-4250-A21C-062A58519243}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E5BD589-A2B6-4E38-A34C-15C8F546F9C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E5BD589-A2B6-4E38-A34C-15C8F546F9C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E5BD589-A2B6-4E38-A34C-15C8F546F9C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E5BD589-A2B6-4E38-A34C-15C8F546F9C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
