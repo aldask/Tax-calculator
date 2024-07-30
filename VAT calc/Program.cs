@@ -2,7 +2,7 @@
 {
     public class Program
     {
-        static Dictionary<string, double> euCountryVatRates = new Dictionary<string, double>
+        static Dictionary<string, double> euCountryTaxRates = new Dictionary<string, double>
         {
             { "lithuania", 0.21 },
             { "poland", 0.23 },
@@ -22,7 +22,7 @@
             { "croatia", 0.25 }
         };
 
-        static Dictionary<string, double> nonEuCountryVatRates = new Dictionary<string, double>
+        static Dictionary<string, double> nonEuCountryTaxRates = new Dictionary<string, double>
         {
             { "norway", 0.25 },
             { "switzerland", 0.077 },
@@ -62,34 +62,34 @@
 
         public static void DisplayCountryList()
         {
-            foreach (var country in euCountryVatRates.Keys)
+            foreach (var country in euCountryTaxRates.Keys)
             {
                 Console.WriteLine(country);
             }
-            foreach (var country in nonEuCountryVatRates.Keys)
+            foreach (var country in nonEuCountryTaxRates.Keys)
             {
                 Console.WriteLine(country);
             }
         }
 
-        public static double CalculateTaxRate(string sellerCountry, string buyerCountry)
+        public static double CalculateTaxRate(string seller_country, string buyer_country)
         {
             double taxRate = 0.0;
 
-            if (sellerCountry == buyerCountry)
+            if (seller_country == buyer_country)
             {
-                if (euCountryVatRates.ContainsKey(buyerCountry))
+                if (euCountryTaxRates.ContainsKey(buyer_country))
                 {
-                    taxRate = euCountryVatRates[buyerCountry];
+                    taxRate = euCountryTaxRates[buyer_country];
                 }
-                else if (nonEuCountryVatRates.ContainsKey(buyerCountry))
+                else if (nonEuCountryTaxRates.ContainsKey(buyer_country))
                 {
-                    taxRate = nonEuCountryVatRates[buyerCountry];
+                    taxRate = nonEuCountryTaxRates[buyer_country];
                 }
             }
-            else if (euCountryVatRates.ContainsKey(sellerCountry))
+            else if (euCountryTaxRates.ContainsKey(seller_country))
             {
-                taxRate = euCountryVatRates[sellerCountry];
+                taxRate = euCountryTaxRates[seller_country];
             }
 
             return taxRate;
