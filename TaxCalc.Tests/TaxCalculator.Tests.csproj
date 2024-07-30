@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\VAT calc\TaxCalculator.csproj" />
+    <ProjectReference Include="..\TaxCalc\TaxCalculator.csproj" />
   </ItemGroup>
 
   <ItemGroup>
